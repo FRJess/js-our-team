@@ -43,7 +43,7 @@ const team = [
   },
 ];
 
-// MILESTONE 2
+// MILESTONE 1
 for(let person of team){
   console.log(
   '-- Nome:', person.name,
