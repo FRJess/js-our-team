@@ -9,35 +9,36 @@
 // **BONUS:**
 // Aggiungere degli aggettivi (più di uno) che identifichino ogni persona e stamparli nella card
 
+
 const people = [
   {
     name :'Wayne Barnett',
     role: 'Founder & CEO',
-    picture: 'inserire',
+    picture: 'img/wayne-barnett-founder-ceo.jpg',
   },
   {
     name :'Angela Caroll',
     role: 'Chief Editor',
-    picture: 'inserire',
+    picture: 'img/angela-caroll-chief-editor.jpg',
   },
   {
     name :'Walter Gordon',
     role: 'Office Manager',
-    picture: 'inserire',
+    picture: 'img/walter-gordon-office-manager.jpg',
   },
   {
     name :'Angela Lopez',
     role: 'Social Media Manager',
-    picture: 'inserire',
+    picture: 'img/angela-lopez-social-media-manager.jpg',
   },
   {
     name :'Scott Estrada',
     role: 'Developer',
-    picture: 'inserire',
+    picture: 'img/scott-estrada-developer.jpg',
   },
   {
     name :'Barbara Ramos',
     role: 'Graphic Designer',
-    picture: 'inserire',
+    picture: 'img/barbara-ramos-graphic-designer.jpg',
   },
 ]
