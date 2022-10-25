@@ -53,10 +53,28 @@ const team = [
 // };
 
 //MILESTONE 2
-const output = document.querySelector('.output');
-let lista = " ";
+// const output = document.querySelector('.output');
+// let lista = " ";
+// for(let person of team){
+//   lista += ` <li>Nome: ${person.name} - Ruolo: ${person.role} - Foto link: ${person.picture}</li>`;
+// };
+
+// output.innerHTML = lista;
+
+//MILESTONE 3
+const cards = document.querySelector('.cards');
+
+let informations = " ";
+
 for(let person of team){
-  lista += ` <li>Nome: ${person.name} - Ruolo: ${person.role} - Foto link: ${person.picture}</li>`;
+  informations +=`
+  <div class="col card">
+  <img src="${person.picture}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">${person.name}</h4>
+    <h6 class="card-title">${person.role}</h6>
+  </div>
+</div>`
 };
 
-output.innerHTML = lista;
+cards.innerHTML = informations;
