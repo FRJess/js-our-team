@@ -14,40 +14,49 @@ const team = [
   {
     name :'Wayne Barnett',
     role: 'Founder & CEO',
-    picture: 'img/wayne-barnett-founder-ceo.jpg',
+    picture: 'img/wayne-barnett-founder-ceo.jpg'
   },
   {
     name :'Angela Caroll',
     role: 'Chief Editor',
-    picture: 'img/angela-caroll-chief-editor.jpg',
+    picture: 'img/angela-caroll-chief-editor.jpg'
   },
   {
     name :'Walter Gordon',
     role: 'Office Manager',
-    picture: 'img/walter-gordon-office-manager.jpg',
+    picture: 'img/walter-gordon-office-manager.jpg'
   },
   {
     name :'Angela Lopez',
     role: 'Social Media Manager',
-    picture: 'img/angela-lopez-social-media-manager.jpg',
+    picture: 'img/angela-lopez-social-media-manager.jpg'
   },
   {
     name :'Scott Estrada',
     role: 'Developer',
-    picture: 'img/scott-estrada-developer.jpg',
+    picture: 'img/scott-estrada-developer.jpg'
   },
   {
     name :'Barbara Ramos',
     role: 'Graphic Designer',
-    picture: 'img/barbara-ramos-graphic-designer.jpg',
+    picture: 'img/barbara-ramos-graphic-designer.jpg'
   },
 ];
 
 // MILESTONE 1
+// for(let person of team){
+//   console.log(
+//   '-- Nome:', person.name,
+//   '/ Ruolo:', person.role,
+//   '/ Foto link:', person.picture
+//   )  
+// };
+
+//MILESTONE 2
+const output = document.querySelector('.output');
+let lista = " ";
 for(let person of team){
-  console.log(
-  '-- Nome:', person.name,
-  '/ Ruolo:', person.role,
-  '/ Foto:', person.picture
-  )  
-}
+  lista += ` <li>Nome: ${person.name} - Ruolo: ${person.role} - Foto link: ${person.picture}</li>`;
+};
+
+output.innerHTML = lista;
