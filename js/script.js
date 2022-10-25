@@ -68,13 +68,15 @@ let informations = " ";
 
 for(let person of team){
   informations +=`
-  <div class="col card">
-  <img src="${person.picture}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h4 class="card-title">${person.name}</h4>
-    <h6 class="card-title">${person.role}</h6>
-  </div>
-</div>`
+  <div class="col-4 mb-4">
+    <div class="card">
+      <img src="${person.picture}" class="card-img-top" alt="...">
+      <div class="card-body text-center">
+        <h4 class="card-title">${person.name}</h4>
+        <h6 class="card-title">${person.role}</h6>
+      </div>
+    </div>
+  </div>`
 };
 
 cards.innerHTML = informations;
