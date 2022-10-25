@@ -9,7 +9,7 @@
 // **BONUS:**
 // Aggiungere degli aggettivi (più di uno) che identifichino ogni persona e stamparli nella card
 
-
+// MILESTONE 0
 const people = [
   {
     name :'Wayne Barnett',
@@ -41,4 +41,4 @@ const people = [
     role: 'Graphic Designer',
     picture: 'img/barbara-ramos-graphic-designer.jpg',
   },
-]
+];
