@@ -69,7 +69,7 @@ let informations = " ";
 for(let person of team){
   informations +=`
   <div class="col-4 mb-4">
-    <div class="card">
+    <div class="card jt-card">
       <img src="${person.picture}" class="card-img-top" alt="...">
       <div class="card-body text-center">
         <h4 class="card-title">${person.name}</h4>

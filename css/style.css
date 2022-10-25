@@ -1,0 +1,26 @@
+/* colors */
+
+body{
+  background-color: #FDFCDC;
+}
+
+.jt-title{
+  background-color: rgba(240, 113, 103, 0.8);
+  color: white;
+}
+
+.jt-card{
+  background-color: #0081A7;
+  color: white;
+}
+
+/* hover on cards */
+
+.jt-card:hover{
+  cursor: pointer;
+}
+
+.jt-card img:hover{
+  transform: scale(1.1);
+  transition: all 1.4s;
+}
