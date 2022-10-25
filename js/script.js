@@ -10,7 +10,7 @@
 // Aggiungere degli aggettivi (più di uno) che identifichino ogni persona e stamparli nella card
 
 // MILESTONE 0
-const people = [
+const team = [
   {
     name :'Wayne Barnett',
     role: 'Founder & CEO',
@@ -42,3 +42,12 @@ const people = [
     picture: 'img/barbara-ramos-graphic-designer.jpg',
   },
 ];
+
+// MILESTONE 2
+for(let person of team){
+  console.log(
+  '-- Nome:', person.name,
+  '/ Ruolo:', person.role,
+  '/ Foto:', person.picture
+  )  
+}
