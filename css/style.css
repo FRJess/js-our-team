@@ -24,3 +24,9 @@ body{
   transform: scale(1.1);
   transition: all 1.4s;
 }
+
+/* .form-container{
+  margin: auto;
+  width: 50%;
+  flex-direction: column;
+} */

@@ -14,32 +14,32 @@ const team = [
   {
     name :'Wayne Barnett',
     role: 'Founder & CEO',
-    picture: 'img/wayne-barnett-founder-ceo.jpg'
+    image: 'wayne-barnett-founder-ceo.jpg'
   },
   {
     name :'Angela Caroll',
     role: 'Chief Editor',
-    picture: 'img/angela-caroll-chief-editor.jpg'
+    image: 'angela-caroll-chief-editor.jpg'
   },
   {
     name :'Walter Gordon',
     role: 'Office Manager',
-    picture: 'img/walter-gordon-office-manager.jpg'
+    image: 'walter-gordon-office-manager.jpg'
   },
   {
     name :'Angela Lopez',
     role: 'Social Media Manager',
-    picture: 'img/angela-lopez-social-media-manager.jpg'
+    image: 'angela-lopez-social-media-manager.jpg'
   },
   {
     name :'Scott Estrada',
     role: 'Developer',
-    picture: 'img/scott-estrada-developer.jpg'
+    image: 'scott-estrada-developer.jpg'
   },
   {
     name :'Barbara Ramos',
     role: 'Graphic Designer',
-    picture: 'img/barbara-ramos-graphic-designer.jpg'
+    image: 'barbara-ramos-graphic-designer.jpg'
   },
 ];
 
@@ -48,7 +48,7 @@ const team = [
 //   console.log(
 //   '-- Nome:', person.name,
 //   '/ Ruolo:', person.role,
-//   '/ Foto link:', person.picture
+//   '/ Foto link:', person.image
 //   )  
 // };
 
@@ -56,27 +56,75 @@ const team = [
 // const output = document.querySelector('.output');
 // let lista = " ";
 // for(let person of team){
-//   lista += ` <li>Nome: ${person.name} - Ruolo: ${person.role} - Foto link: ${person.picture}</li>`;
+//   lista += ` <li>Nome: ${person.name} - Ruolo: ${person.role} - Foto link: ${person.image}</li>`;
 // };
 
 // output.innerHTML = lista;
 
 //MILESTONE 3
-const cards = document.querySelector('.cards');
+
+const teamContainer = document.querySelector('.team-container');
+const addButton = document.querySelector('#addMemberButton');
+addButton.addEventListener('click', addNewMember);
 
 let informations = " ";
 
-for(let person of team){
-  informations +=`
-  <div class="col-4 mb-4">
-    <div class="card jt-card">
-      <img src="${person.picture}" class="card-img-top" alt="...">
-      <div class="card-body text-center">
-        <h4 class="card-title">${person.name}</h4>
-        <h6 class="card-title">${person.role}</h6>
-      </div>
-    </div>
-  </div>`
-};
+teamCreation();
 
-cards.innerHTML = informations;
+function teamCreation(){
+  
+  teamContainer.innerHTML = '';
+
+  team.forEach( (teamMember) => teamMemberCreation(teamMember) );
+
+}
+
+function teamMemberCreation(teamMember){
+  let content = teamContainer.innerHTML;
+
+    const name = teamMember.name;
+    const role = teamMember.role;
+    const image = teamMember.image;
+
+    content +=`
+    <div class="col-4 mb-4">
+      <div class="card jt-card">
+        <img src="img/${image}" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h4 class="card-title">${name}</h4>
+          <h6 class="card-title">${role}</h6>
+        </div>
+      </div>
+    </div>`
+    ;
+ 
+  
+    teamContainer.innerHTML = content;
+}
+
+
+
+//NEW TEAM MEMBER
+function addNewMember(){
+  const name = document.getElementById('name').value;
+  const role = document.getElementById('role').value;
+  const image = document.getElementById('image').value;
+
+  const newTeamMember = {
+    name: name,
+    role: role,
+    image: image
+  }
+
+  teamMemberCreation(newTeamMember);
+  team.push(newTeamMember);
+  resetForm()
+
+}
+
+function resetForm(){
+  document.getElementById('name').value = '';
+  document.getElementById('role').value = '';
+  document.getElementById('picture').value = '';
+  document.getElementById('qualities').value = '';
+}
